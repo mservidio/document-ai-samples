@@ -1,4 +1,4 @@
-# Document AI Fraud Detection Demo with Enterprise Knowledge Graph
+# Document AI Fraud Detection Demo with Enterprise Knowledge Graph and Google Maps Geocoding API
 
 ## Objective
 
@@ -46,18 +46,18 @@ gcloud services enable geocoding-backend.googleapis.com
 gcloud services enable cloudbuild.googleapis.com
 ```
 
-1. Initialize repositorysitory
+1. Initialize repository
 
     * Activate your Command Shell and clone this GitHub repository in your Command shell using the command:
   
         ```sh
-        git clone https://github.com/GoogleCloudPlatform/documentai-fraud-detection-demo.git
+        git clone https://github.com/GoogleCloudPlatform/document-ai-samples.git
         ```
 
     * Change Directory to the repository Folder
 
        ```sh
-       cd documentai-fraud-detection-demo
+       cd fraud-detection-python
        ```
 
 2. Manage API Key
@@ -81,16 +81,13 @@ gcloud services enable cloudbuild.googleapis.com
 
      1. Update the value of PROJECT_ID in [`.env.local`](.env.local) to match your current projectID
 
-     2. Execute your .sh files to create cloud resources
+     2. Execute your .sh files to create cloud resources and grant necessary permissions.
 
         ```sh
-        bash create-archive-bucket.sh
-        bash create-input-bucket.sh
-        bash create-output-bucket.sh
+        bash create-storage-buckets.sh
         bash create-pub-sub-topic.sh
         bash create-bq-tables.sh
-        bash deploy-cloud-function-process-invoices.sh
-        bash deploy-cloud-function-geocode-addresses.sh
+        bash deploy-cloud-functions.sh
         ```
 
 5. Testing/Validating the demo

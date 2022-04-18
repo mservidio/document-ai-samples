@@ -1,0 +1,11 @@
+#!/bin/bash
+
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+source "${DIR}/.env.local"
+
+gsutil mb -p ${PROJECT_ID} -c standard -l ${BUCKET_LOCATION} -b on ${INPUT_BUCKET}
+
+gsutil mb -p ${PROJECT_ID} -c standard -l ${BUCKET_LOCATION} -b on ${OUTPUT_BUCKET}
+
+gsutil mb -p ${PROJECT_ID} -c standard -l ${BUCKET_LOCATION} -b on ${ARCHIVE_BUCKET}
