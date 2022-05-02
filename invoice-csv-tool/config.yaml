@@ -1,0 +1,4 @@
+docai_processor_location: us # Document AI Processor Location (us OR eu)
+docai_project_id: PROJECT_ID # Project ID for Document AI Processors
+docai_processor_id: PROCESSOR_ID
+gcs_bucket: BUCKET_NAME

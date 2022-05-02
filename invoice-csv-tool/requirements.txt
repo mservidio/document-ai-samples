@@ -1,0 +1,10 @@
+typing
+pyyaml
+
+google-api-core
+google-cloud-documentai
+google-cloud-storage
+
+Flask
+gunicorn
+pandas
